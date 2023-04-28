@@ -15,7 +15,10 @@ If your already have an account to connect to databse, you have to modify the Co
 If you want to create a new user, execute the  database engine:
 
 ```sql
-select 1 from table
+CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'dbpassword';
+GRANT ALL PRIVILEGES ON databasename.* TO 'dbuser'@'localhost';
+
 ```
+If you edit the username and password, remember to update the Config.php file to ensure it matches the new credentials.
 
 3. 
